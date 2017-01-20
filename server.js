@@ -17,11 +17,7 @@ expressApp.use(bodyParser.json());
 expressApp.use(bodyParser.urlencoded({extended:true}));
 expressApp.use(cors());
 
-expressApp.use('/api/contacts',require('./api/routes/post_drivers'));
-expressApp.use('/api/contacts',require('./api/routes/get_drivers'));
-expressApp.use('/api/contacts',require('./api/routes/get_driver'));
-expressApp.use('/api/contacts',require('./api/routes/delete_driver'));
-expressApp.use('/api/contacts',require('./api/routes/edit_driver'));
+expressApp.use('/api/contacts',require('./api/routes/driver'));
 
 // first value must be port, then host name and then callback function
 expressApp.listen(port, ()=>{
